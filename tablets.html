@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile phones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="heading"><u>Amazon Clone</u></h1>
+        <p id="description"><i>This is an e-commerce website clone</i></p>
+        <nav id="panel">
+            <a href="index.html" >Home</a>
+            <a href="mobile.html" >Mobile phones</a>
+            <a href="laptops.html" >Laptops</a>
+            <a href="tablets.html" >Tablets</a>
+        </nav> 
+    </header>
+
+    <span id="filters">
+        <form action="submit.php">
+            <h2>Filters</h2>
+            <input type="reset" value="Reset">
+            
+            <h4>Delivery Date</h4>
+            <label for="tomorrow">
+                <input type="checkbox" name="deliverydate" id="tomorrow" class="delivery filter"> Tomorrow <br>
+            </label>
+            <label for="today">
+                <input type="checkbox" name="deliverydate" id="today" class="delivery filter"> Today <br>
+            </label>
+            <label for="after2days">
+                <input type="checkbox" name="deliverydate" id="after2days" class="delivery filter"> After 2 Days <br>
+            </label>
+            
+            <h4>Discounts</h4>
+            <label for="discount10">
+                <input type="checkbox" name="discount" id="discount10" class="discount filter"> 10% off <br>
+            </label>
+            <label for="discount20">
+                <input type="checkbox" name="discount" id="discount20" class="discount filter"> 20% off <br>
+            </label>
+            <label for="discount30">
+            <input type="checkbox" name="discount" id="discount30" class="discount filter"> 30% off <br>
+        </label>
+        <label for="discount40">
+            <input type="checkbox" name="discount" id="discount40" class="discount filter"> 40% off <br>
+        </label>
+        
+        <h4>Color</h4>
+        <label for="red">
+            <input type="checkbox" name="color" id="red" class="color filter"> Red <br>
+        </label>
+        <label for="black">
+            <input type="checkbox" name="color" id="black" class="color filter"> Black <br>
+        </label>
+        <label for="blue">
+            <input type="checkbox" name="color" id="blue" class="color filter"> Blue <br>
+        </label>
+        <label for="yellow">
+            <input type="checkbox" name="color" id="yellow" class="color filter"> Yellow <br>
+        </label>
+        
+        <h4>Price Range</h4>
+        100 
+        <input type="range" id="priceRange" min="100" max="10000" value="5000" step="100" oninput="priceValue.innerText=this.value">
+        10000<br>
+        <span id="priceValue">5000</span>
+        
+        <h4>Warranty Period</h4>
+        <label for="warranty1">
+            <input type="checkbox" name="warranty" id="warranty1" class="warranty filter"> 1 Year <br>
+        </label>
+        <label for="warranty2">
+            <input type="checkbox" name="warranty" id="warranty2" class="warranty filter"> 2 Years <br>
+        </label>
+        <label for="warranty3">
+            <input type="checkbox" name="warranty" id="warranty3" class="warranty filter"> 3 Years <br>
+        </label>
+    </form>
+    </span>
+    <main>
+        <h2>Products</h2>
+        <div class="products">
+            <div class="product">
+                <a href="https://in.images.search.yahoo.com/search/images;_ylt=AwrPrmeHlbtnEwIAiT67HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=ipad+gen1&fr2=piv-web&type=E210IN885G0&fr=mcafee#id=2&iurl=http%3A%2F%2Fimg.auctiva.com%2Fimgdata%2F1%2F8%2F0%2F6%2F0%2F8%2F9%2Fwebimg%2F827827263_o.jpg&action=click" alt="ipad gen1"></a>
+                <h3>ipad gen1</h3>
+                <p>Price: ₹100000</p>
+                <button onclick="addToCart('ipad gen1', 60050)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>samsung tablet4</h3>
+                <p>Price: ₹2000000</p>
+                <button onclick="addToCart('samsung tablet4', 120000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>lenevo tab</h3>
+                <p>Price: ₹30050</p>
+                <button onclick="addToCart('lenevo tab', 100000)">Add to Cart</button>
+
+            </div>
+        </div>
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: ₹0</p>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
